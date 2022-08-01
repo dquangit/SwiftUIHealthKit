@@ -14,6 +14,18 @@
 		A76107682897834F0015ECC7 /* SwiftUIHealthKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76107672897834F0015ECC7 /* SwiftUIHealthKitTests.swift */; };
 		A7610772289783500015ECC7 /* SwiftUIHealthKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7610771289783500015ECC7 /* SwiftUIHealthKitUITests.swift */; };
 		A7610774289783500015ECC7 /* SwiftUIHealthKitUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7610773289783500015ECC7 /* SwiftUIHealthKitUITestsLaunchTests.swift */; };
+		A7610786289786FF0015ECC7 /* ConnectionManagementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7610785289786FF0015ECC7 /* ConnectionManagementView.swift */; };
+		A761078C28978A2B0015ECC7 /* UserMedicalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761078B28978A2B0015ECC7 /* UserMedicalView.swift */; };
+		A7F2EF902897D424009B051B /* ConnectionManagementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F2EF8F2897D424009B051B /* ConnectionManagementViewModel.swift */; };
+		A7F2EF922897D449009B051B /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F2EF912897D449009B051B /* ViewModel.swift */; };
+		A7F2EF942897D4B1009B051B /* UserMedicalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F2EF932897D4B1009B051B /* UserMedicalViewModel.swift */; };
+		A7F2EF982897EDBB009B051B /* CustomTabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F2EF972897EDBB009B051B /* CustomTabbarView.swift */; };
+		A7F2EF9B2897F133009B051B /* ApplicationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F2EF9A2897F133009B051B /* ApplicationView.swift */; };
+		A7F2EF9E2897F209009B051B /* ImageAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F2EF9D2897F209009B051B /* ImageAssets.swift */; };
+		A7F2EFA42897F9BE009B051B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A7F2EFA32897F9BE009B051B /* Localizable.strings */; };
+		A7F2EFA628980D15009B051B /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F2EFA528980D15009B051B /* String+Extension.swift */; };
+		A7F2EFA8289812CB009B051B /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F2EFA7289812CB009B051B /* AppColor.swift */; };
+		A7F2EFAE289830F1009B051B /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F2EFAD289830F1009B051B /* Color+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +56,18 @@
 		A761076D289783500015ECC7 /* SwiftUIHealthKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIHealthKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7610771289783500015ECC7 /* SwiftUIHealthKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIHealthKitUITests.swift; sourceTree = "<group>"; };
 		A7610773289783500015ECC7 /* SwiftUIHealthKitUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIHealthKitUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A7610785289786FF0015ECC7 /* ConnectionManagementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionManagementView.swift; sourceTree = "<group>"; };
+		A761078B28978A2B0015ECC7 /* UserMedicalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMedicalView.swift; sourceTree = "<group>"; };
+		A7F2EF8F2897D424009B051B /* ConnectionManagementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionManagementViewModel.swift; sourceTree = "<group>"; };
+		A7F2EF912897D449009B051B /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		A7F2EF932897D4B1009B051B /* UserMedicalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMedicalViewModel.swift; sourceTree = "<group>"; };
+		A7F2EF972897EDBB009B051B /* CustomTabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabbarView.swift; sourceTree = "<group>"; };
+		A7F2EF9A2897F133009B051B /* ApplicationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationView.swift; sourceTree = "<group>"; };
+		A7F2EF9D2897F209009B051B /* ImageAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAssets.swift; sourceTree = "<group>"; };
+		A7F2EFA32897F9BE009B051B /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		A7F2EFA528980D15009B051B /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		A7F2EFA7289812CB009B051B /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
+		A7F2EFAD289830F1009B051B /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +118,13 @@
 		A76107552897834D0015ECC7 /* SwiftUIHealthKit */ = {
 			isa = PBXGroup;
 			children = (
+				A7F2EFA22897F9A1009B051B /* Resources */,
+				A7F2EF9F2897F35F009B051B /* Extensions */,
+				A7F2EF9C2897F1EE009B051B /* Constants */,
+				A7610787289787470015ECC7 /* Services */,
+				A7610782289785280015ECC7 /* Common */,
+				A7610781289785190015ECC7 /* Models */,
+				A7610780289783980015ECC7 /* Modules */,
 				A76107562897834D0015ECC7 /* SwiftUIHealthKitApp.swift */,
 				A76107582897834D0015ECC7 /* ContentView.swift */,
 				A761075A2897834F0015ECC7 /* Assets.xcassets */,
@@ -125,6 +156,91 @@
 				A7610773289783500015ECC7 /* SwiftUIHealthKitUITestsLaunchTests.swift */,
 			);
 			path = SwiftUIHealthKitUITests;
+			sourceTree = "<group>";
+		};
+		A7610780289783980015ECC7 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				A761078A289788DE0015ECC7 /* UserMedical */,
+				A76107892897876A0015ECC7 /* ConnectionManagement */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		A7610781289785190015ECC7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A7610782289785280015ECC7 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				A7F2EF912897D449009B051B /* ViewModel.swift */,
+				A7F2EF972897EDBB009B051B /* CustomTabbarView.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		A7610787289787470015ECC7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A76107892897876A0015ECC7 /* ConnectionManagement */ = {
+			isa = PBXGroup;
+			children = (
+				A7F2EF992897F11C009B051B /* Views */,
+				A7610785289786FF0015ECC7 /* ConnectionManagementView.swift */,
+				A7F2EF8F2897D424009B051B /* ConnectionManagementViewModel.swift */,
+			);
+			path = ConnectionManagement;
+			sourceTree = "<group>";
+		};
+		A761078A289788DE0015ECC7 /* UserMedical */ = {
+			isa = PBXGroup;
+			children = (
+				A761078B28978A2B0015ECC7 /* UserMedicalView.swift */,
+				A7F2EF932897D4B1009B051B /* UserMedicalViewModel.swift */,
+			);
+			path = UserMedical;
+			sourceTree = "<group>";
+		};
+		A7F2EF992897F11C009B051B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A7F2EF9A2897F133009B051B /* ApplicationView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A7F2EF9C2897F1EE009B051B /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				A7F2EF9D2897F209009B051B /* ImageAssets.swift */,
+				A7F2EFA7289812CB009B051B /* AppColor.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		A7F2EF9F2897F35F009B051B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A7F2EFA528980D15009B051B /* String+Extension.swift */,
+				A7F2EFAD289830F1009B051B /* Color+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A7F2EFA22897F9A1009B051B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A7F2EFA32897F9BE009B051B /* Localizable.strings */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A761075E2897834F0015ECC7 /* Preview Assets.xcassets in Resources */,
+				A7F2EFA42897F9BE009B051B /* Localizable.strings in Resources */,
 				A761075B2897834F0015ECC7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,7 +374,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7F2EF9E2897F209009B051B /* ImageAssets.swift in Sources */,
+				A7F2EFAE289830F1009B051B /* Color+Extension.swift in Sources */,
+				A7F2EFA628980D15009B051B /* String+Extension.swift in Sources */,
 				A76107592897834D0015ECC7 /* ContentView.swift in Sources */,
+				A761078C28978A2B0015ECC7 /* UserMedicalView.swift in Sources */,
+				A7F2EF942897D4B1009B051B /* UserMedicalViewModel.swift in Sources */,
+				A7F2EFA8289812CB009B051B /* AppColor.swift in Sources */,
+				A7F2EF982897EDBB009B051B /* CustomTabbarView.swift in Sources */,
+				A7F2EF902897D424009B051B /* ConnectionManagementViewModel.swift in Sources */,
+				A7F2EF9B2897F133009B051B /* ApplicationView.swift in Sources */,
+				A7610786289786FF0015ECC7 /* ConnectionManagementView.swift in Sources */,
+				A7F2EF922897D449009B051B /* ViewModel.swift in Sources */,
 				A76107572897834D0015ECC7 /* SwiftUIHealthKitApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

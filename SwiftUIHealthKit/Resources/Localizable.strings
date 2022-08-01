@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  SwiftUIHealthKit
+
+  Created by Quang Pham on 01/08/2022.
+  
+*/
+
+"applications" = "Applications";
+"devices" = "Devices";
+"google_fit" = "Google Fit";
+"samsung_health" = "Samsung Health";
+"garmin_connect" = "Garmin Connect";
+"apple_health" = "Health";
+"manage_connections" = "Manage Connections";
+"connect" = "Connect";
+"choose_one_app" = "Choose one of the apps";
+"info" = "Info";
