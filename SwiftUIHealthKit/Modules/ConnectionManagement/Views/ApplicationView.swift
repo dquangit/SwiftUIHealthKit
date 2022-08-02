@@ -27,12 +27,19 @@ struct ApplicationView: View {
             LazyVGrid(columns: colums, spacing: 60) {
                 ForEach(items, id: \.id) { item in
                     let selected = selectedId == item.id
-                    VStack(alignment: .center, spacing: 10) {
-                        Image(item.asset)
-                        Text(item.title)
-                            .lineLimit(1)
-                            .font(.system(size: 17).bold())
+                    Button {
+                        selectedId = selected ? nil : item.id
+                    } label: {
+                        VStack(alignment: .center, spacing: 10) {
+                            Image(item.asset)
+                            Text(item.title)
+                                .lineLimit(1)
+                                .font(.system(size: 17).bold())
+                        }
+                        
+                        
                     }
+                    .disabled(!item.enabled)
                     .frame(
                         width: 145,
                         height: 155,
@@ -45,9 +52,7 @@ struct ApplicationView: View {
                                 lineWidth: selected ? 3 : 1
                             )
                     )
-                    .onTapGesture {
-                        selectedId = selected ? nil : item.id
-                    }
+                    .buttonStyle(.plain)
                 }
             }
             .padding(.horizontal)
@@ -56,7 +61,16 @@ struct ApplicationView: View {
 }
 
 struct ApplicationViewItem {
+
     let id: String
     let asset: String
     let title: String
+    let enabled: Bool
+
+    init(id: String, asset: String, title: String, enabled: Bool = true) {
+        self.id = id
+        self.asset = asset
+        self.title = title
+        self.enabled = enabled
+    }
 }

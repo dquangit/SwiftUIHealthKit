@@ -9,34 +9,13 @@ import SwiftUI
 
 struct ConnectionManagementView: View {
     
-    @StateObject private var viewModel = ConnectionManagementViewModel()
+    @StateObject private var viewModel = ConnectionManagementViewModel(
+        service: AppleHealthService()
+    )
     
     private let tabbarItems = [
         TabbarItem(title: "applications".localized),
         TabbarItem(title: "devices".localized)
-    ]
-    
-    private let applicationItems = [
-        ApplicationViewItem(
-            id: ImageAssets.googleFit.rawValue,
-            asset: ImageAssets.googleFit.rawValue,
-            title: "google_fit".localized
-        ),
-        ApplicationViewItem(
-            id: ImageAssets.samsungFit.rawValue,
-            asset: ImageAssets.samsungFit.rawValue,
-            title: "samsung_health".localized
-        ),
-        ApplicationViewItem(
-            id: ImageAssets.garmin.rawValue,
-            asset: ImageAssets.garmin.rawValue,
-            title: "garmin_connect".localized
-        ),
-        ApplicationViewItem(
-            id: ImageAssets.appleHealth.rawValue,
-            asset: ImageAssets.appleHealth.rawValue,
-            title: "apple_health".localized
-        ),
     ]
     
     var body: some View {
@@ -50,12 +29,14 @@ struct ConnectionManagementView: View {
                 TabView(selection: $viewModel.tabIndex) {
                     VStack {
                         ApplicationView(
-                            items: applicationItems,
+                            items: viewModel.applicationItems,
                             selectedId: $viewModel.appId
                         )
                         Spacer()
                         Button {
-                            
+                            Task {
+                                await viewModel.sync()
+                            }
                         } label: {
                             Text("connect")
                                 .font(.system(size: 18).bold())
@@ -78,6 +59,9 @@ struct ConnectionManagementView: View {
                 .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
             }
             .navigationTitle("manage_connections".asLocalizedKey)
+            .task {
+                await viewModel.checkHealthAvailability()
+            }
         }
     }
 }
