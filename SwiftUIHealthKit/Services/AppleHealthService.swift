@@ -123,7 +123,6 @@ class AppleHealthService: HealthService {
                     )
                 )
             case .height:
-                
                 userMedical = userMedical.copyWith(
                     height: quantity.doubleValue(
                         for: .meterUnit(with: .centi)

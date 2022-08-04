@@ -19,49 +19,59 @@ struct ConnectionManagementView: View {
     ]
     
     var body: some View {
-        NavigationView {
-            VStack(alignment: .center) {
-                CustomTabbarView(
-                    index: $viewModel.tabIndex,
-                    tabbarItems: tabbarItems
-                )
-                .background(AppColor.dodgerBlue)
-                TabView(selection: $viewModel.tabIndex) {
-                    VStack {
-                        ApplicationView(
-                            items: viewModel.applicationItems,
-                            selectedId: $viewModel.appId
-                        )
-                        Spacer()
-                        Button {
-                            Task {
-                                await viewModel.sync()
-                            }
-                        } label: {
-                            Text("connect")
-                                .font(.system(size: 18).bold())
-                                .foregroundColor(viewModel.buttonEnabled ? .white : AppColor.manateeapprox)
-                                .padding(.horizontal, 55)
-                                .padding(.vertical, 16)
+        VStack(alignment: .center, spacing: 0) {
+            CustomNavigationBar(
+                title: "manage_connections".localized,
+                hideBackButton: true
+            ) {
+                EmptyView()
+            }
+            CustomTabbarView(
+                index: $viewModel.tabIndex,
+                tabbarItems: tabbarItems
+            )
+            .background(AppColor.dodgerBlue)
+            TabView(selection: $viewModel.tabIndex) {
+                VStack {
+                    ApplicationView(
+                        items: viewModel.applicationItems,
+                        selectedId: $viewModel.appId
+                    )
+                    Spacer()
+                    Button {
+                        Task {
+                            await viewModel.sync()
                         }
-                        .background(viewModel.buttonEnabled ? AppColor.dodgerBlue : AppColor.mercucy)
-                        .disabled(!viewModel.buttonEnabled)
-                        .cornerRadius(12)
-                        .animation(.default, value: viewModel.buttonEnabled)
-                        .padding()
-                        Spacer()
+                    } label: {
+                        Text("connect")
+                            .font(.system(size: 18).bold())
+                            .foregroundColor(viewModel.buttonEnabled ? .white : AppColor.manatee)
+                            .padding(.horizontal, 55)
+                            .padding(.vertical, 16)
                     }
-                    .tag(0)
-                    Text("Not implemented")
-                    .tag(1)
+                    .background(viewModel.buttonEnabled ? AppColor.dodgerBlue : AppColor.mercucy)
+                    .disabled(!viewModel.buttonEnabled)
+                    .cornerRadius(12)
+                    .animation(.default, value: viewModel.buttonEnabled)
+                    .padding()
+                    Spacer()
                 }
-                .tabViewStyle(PageTabViewStyle())
-                .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+                .tag(0)
+                Text("Not implemented")
+                    .tag(1)
             }
-            .navigationTitle("manage_connections".asLocalizedKey)
-            .task {
-                await viewModel.checkHealthAvailability()
+            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+            NavigationLink(
+                destination: UserMedicalView(
+                    userMedical: viewModel.userMedical
+                ),
+                isActive: $viewModel.gotoMedicalView
+            ) {
+                
             }
+        }
+        .task {
+            await viewModel.checkHealthAvailability()
         }
     }
 }

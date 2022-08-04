@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		A73A373228999F1900BDDB5F /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A73A373128999F1900BDDB5F /* HealthKit.framework */; };
 		A76107572897834D0015ECC7 /* SwiftUIHealthKitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76107562897834D0015ECC7 /* SwiftUIHealthKitApp.swift */; };
-		A76107592897834D0015ECC7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76107582897834D0015ECC7 /* ContentView.swift */; };
 		A761075B2897834F0015ECC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A761075A2897834F0015ECC7 /* Assets.xcassets */; };
 		A761075E2897834F0015ECC7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A761075D2897834F0015ECC7 /* Preview Assets.xcassets */; };
 		A76107682897834F0015ECC7 /* SwiftUIHealthKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76107672897834F0015ECC7 /* SwiftUIHealthKitTests.swift */; };
@@ -17,6 +16,14 @@
 		A7610774289783500015ECC7 /* SwiftUIHealthKitUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7610773289783500015ECC7 /* SwiftUIHealthKitUITestsLaunchTests.swift */; };
 		A7610786289786FF0015ECC7 /* ConnectionManagementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7610785289786FF0015ECC7 /* ConnectionManagementView.swift */; };
 		A761078C28978A2B0015ECC7 /* UserMedicalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761078B28978A2B0015ECC7 /* UserMedicalView.swift */; };
+		A77E46CE289A2D84001C71AE /* UnderlineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77E46CD289A2D84001C71AE /* UnderlineTextField.swift */; };
+		A77EF20D289AACBB00C8DFEF /* UserMedicalGeneralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77EF20C289AACBB00C8DFEF /* UserMedicalGeneralView.swift */; };
+		A77EF20F289B4D0100C8DFEF /* RadioButtonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77EF20E289B4D0100C8DFEF /* RadioButtonGroup.swift */; };
+		A77EF213289B8F5A00C8DFEF /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77EF212289B8F5A00C8DFEF /* Gender.swift */; };
+		A77EF215289B8F6D00C8DFEF /* WeightUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77EF214289B8F6D00C8DFEF /* WeightUnit.swift */; };
+		A7852C4C289BB234009A01B6 /* UserMedicalAdvancedlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7852C4B289BB234009A01B6 /* UserMedicalAdvancedlView.swift */; };
+		A7852C4E289BD135009A01B6 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7852C4D289BD135009A01B6 /* AvatarView.swift */; };
+		A78A25D3289BE9AE003510FD /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78A25D2289BE9AE003510FD /* CustomNavigationBar.swift */; };
 		A7F2EF902897D424009B051B /* ConnectionManagementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F2EF8F2897D424009B051B /* ConnectionManagementViewModel.swift */; };
 		A7F2EF922897D449009B051B /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F2EF912897D449009B051B /* ViewModel.swift */; };
 		A7F2EF942897D4B1009B051B /* UserMedicalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F2EF932897D4B1009B051B /* UserMedicalViewModel.swift */; };
@@ -55,7 +62,6 @@
 		A73A373128999F1900BDDB5F /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		A76107532897834D0015ECC7 /* SwiftUIHealthKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIHealthKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A76107562897834D0015ECC7 /* SwiftUIHealthKitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIHealthKitApp.swift; sourceTree = "<group>"; };
-		A76107582897834D0015ECC7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A761075A2897834F0015ECC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A761075D2897834F0015ECC7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A76107632897834F0015ECC7 /* SwiftUIHealthKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIHealthKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +71,14 @@
 		A7610773289783500015ECC7 /* SwiftUIHealthKitUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIHealthKitUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A7610785289786FF0015ECC7 /* ConnectionManagementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionManagementView.swift; sourceTree = "<group>"; };
 		A761078B28978A2B0015ECC7 /* UserMedicalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMedicalView.swift; sourceTree = "<group>"; };
+		A77E46CD289A2D84001C71AE /* UnderlineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineTextField.swift; sourceTree = "<group>"; };
+		A77EF20C289AACBB00C8DFEF /* UserMedicalGeneralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMedicalGeneralView.swift; sourceTree = "<group>"; };
+		A77EF20E289B4D0100C8DFEF /* RadioButtonGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonGroup.swift; sourceTree = "<group>"; };
+		A77EF212289B8F5A00C8DFEF /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
+		A77EF214289B8F6D00C8DFEF /* WeightUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightUnit.swift; sourceTree = "<group>"; };
+		A7852C4B289BB234009A01B6 /* UserMedicalAdvancedlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMedicalAdvancedlView.swift; sourceTree = "<group>"; };
+		A7852C4D289BD135009A01B6 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		A78A25D2289BE9AE003510FD /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
 		A7F2EF8F2897D424009B051B /* ConnectionManagementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionManagementViewModel.swift; sourceTree = "<group>"; };
 		A7F2EF912897D449009B051B /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		A7F2EF932897D4B1009B051B /* UserMedicalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMedicalViewModel.swift; sourceTree = "<group>"; };
@@ -148,7 +162,6 @@
 				A7610781289785190015ECC7 /* Models */,
 				A7610780289783980015ECC7 /* Modules */,
 				A76107562897834D0015ECC7 /* SwiftUIHealthKitApp.swift */,
-				A76107582897834D0015ECC7 /* ContentView.swift */,
 				A761075A2897834F0015ECC7 /* Assets.xcassets */,
 				A761075C2897834F0015ECC7 /* Preview Content */,
 			);
@@ -202,6 +215,9 @@
 			children = (
 				A7F2EF912897D449009B051B /* ViewModel.swift */,
 				A7F2EF972897EDBB009B051B /* CustomTabbarView.swift */,
+				A77E46CD289A2D84001C71AE /* UnderlineTextField.swift */,
+				A77EF20E289B4D0100C8DFEF /* RadioButtonGroup.swift */,
+				A78A25D2289BE9AE003510FD /* CustomNavigationBar.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -228,10 +244,21 @@
 		A761078A289788DE0015ECC7 /* UserMedical */ = {
 			isa = PBXGroup;
 			children = (
+				A77EF20B289AAC9D00C8DFEF /* Views */,
 				A761078B28978A2B0015ECC7 /* UserMedicalView.swift */,
 				A7F2EF932897D4B1009B051B /* UserMedicalViewModel.swift */,
 			);
 			path = UserMedical;
+			sourceTree = "<group>";
+		};
+		A77EF20B289AAC9D00C8DFEF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A77EF20C289AACBB00C8DFEF /* UserMedicalGeneralView.swift */,
+				A7852C4B289BB234009A01B6 /* UserMedicalAdvancedlView.swift */,
+				A7852C4D289BD135009A01B6 /* AvatarView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		A7F2EF992897F11C009B051B /* Views */ = {
@@ -247,6 +274,8 @@
 			children = (
 				A7F2EF9D2897F209009B051B /* ImageAssets.swift */,
 				A7F2EFA7289812CB009B051B /* AppColor.swift */,
+				A77EF212289B8F5A00C8DFEF /* Gender.swift */,
+				A77EF214289B8F6D00C8DFEF /* WeightUnit.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -401,19 +430,26 @@
 			files = (
 				A7F2EF9E2897F209009B051B /* ImageAssets.swift in Sources */,
 				A7F2EFAE289830F1009B051B /* Color+Extension.swift in Sources */,
+				A77E46CE289A2D84001C71AE /* UnderlineTextField.swift in Sources */,
+				A77EF215289B8F6D00C8DFEF /* WeightUnit.swift in Sources */,
 				A7F2EFB228984E25009B051B /* UserMedical.swift in Sources */,
 				A7F2EFA628980D15009B051B /* String+Extension.swift in Sources */,
-				A76107592897834D0015ECC7 /* ContentView.swift in Sources */,
+				A7852C4C289BB234009A01B6 /* UserMedicalAdvancedlView.swift in Sources */,
+				A78A25D3289BE9AE003510FD /* CustomNavigationBar.swift in Sources */,
+				A77EF20D289AACBB00C8DFEF /* UserMedicalGeneralView.swift in Sources */,
 				A761078C28978A2B0015ECC7 /* UserMedicalView.swift in Sources */,
 				A7F2EF942897D4B1009B051B /* UserMedicalViewModel.swift in Sources */,
 				A7F2EFA8289812CB009B051B /* AppColor.swift in Sources */,
+				A77EF20F289B4D0100C8DFEF /* RadioButtonGroup.swift in Sources */,
 				A7F2EF982897EDBB009B051B /* CustomTabbarView.swift in Sources */,
 				A7F2EF902897D424009B051B /* ConnectionManagementViewModel.swift in Sources */,
 				A7F2EF9B2897F133009B051B /* ApplicationView.swift in Sources */,
+				A7852C4E289BD135009A01B6 /* AvatarView.swift in Sources */,
 				A7610786289786FF0015ECC7 /* ConnectionManagementView.swift in Sources */,
 				A7F2EFB4289850A2009B051B /* AppleHealthService.swift in Sources */,
 				A7F2EFB028984E04009B051B /* HealthService.swift in Sources */,
 				A7F2EF922897D449009B051B /* ViewModel.swift in Sources */,
+				A77EF213289B8F5A00C8DFEF /* Gender.swift in Sources */,
 				A76107572897834D0015ECC7 /* SwiftUIHealthKitApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

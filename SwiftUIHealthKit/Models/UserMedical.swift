@@ -55,7 +55,3 @@ struct UserMedical {
         )
     }
 }
-
-enum Gender {
-    case male, female
-}

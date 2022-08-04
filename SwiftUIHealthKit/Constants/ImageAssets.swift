@@ -8,5 +8,15 @@
 import Foundation
 
 enum ImageAssets: String {
-    case appleHealth, garmin, samsungFit, googleFit
+    case appleHealth
+    case garmin
+    case samsungFit
+    case googleFit
+    case profile
+    case avatarPlaceholder
+    case radio
+    case radioChecked
+    case back
+    case info
+    case upload
 }

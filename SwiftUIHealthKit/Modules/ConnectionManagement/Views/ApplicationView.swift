@@ -36,8 +36,6 @@ struct ApplicationView: View {
                                 .lineLimit(1)
                                 .font(.system(size: 17).bold())
                         }
-                        
-                        
                     }
                     .disabled(!item.enabled)
                     .frame(

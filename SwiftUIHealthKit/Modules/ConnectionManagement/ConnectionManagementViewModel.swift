@@ -45,17 +45,20 @@ class ConnectionManagementViewModel: ViewModel {
             buttonEnabled = appId != nil
         }
     }
-    @Published private(set) var buttonEnabled: Bool = false
+    @Published private(set) var buttonEnabled = false
+    @Published private(set) var userMedical: UserMedical?
+    @Published var gotoMedicalView = false
     
     init(service: HealthService) {
         self.service = service
     }
     
     func sync() async {
-
         do {
            let result = try await service.getUserMedicalInfo()
-            print("\(result?.hearRate) \(result?.glucoseLevel) \(result?.height) \(result?.weight) \(result?.gender) \(result?.dateOfBirth)")
+            print(result.debugDescription)
+            userMedical = result
+            gotoMedicalView = true
         } catch {
             print(error.localizedDescription)
         }

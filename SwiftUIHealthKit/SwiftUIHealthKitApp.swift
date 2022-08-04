@@ -11,20 +11,24 @@ import SwiftUI
 struct SwiftUIHealthKitApp: App {
     
     init() {
-        let appearance = UINavigationBarAppearance()
-        appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = UIColor(AppColor.dodgerBlue)
-        appearance.shadowColor = .clear
-        appearance.largeTitleTextAttributes =  [
-            .foregroundColor: UIColor.white,
-            .font: UIFont.boldSystemFont(ofSize: 24)
-        ]
-        UINavigationBar.appearance().scrollEdgeAppearance = appearance
+//        let appearance = UINavigationBarAppearance()
+//        appearance.configureWithOpaqueBackground()
+//        appearance.backgroundColor = UIColor(AppColor.dodgerBlue)
+//        appearance.shadowColor = .clear
+//        appearance.largeTitleTextAttributes =  [
+//            .foregroundColor: UIColor.white,
+//            .font: UIFont.boldSystemFont(ofSize: 24)
+//        ]
+//        UINavigationBar.appearance().scrollEdgeAppearance = appearance
     }
     
     var body: some Scene {
         WindowGroup {
-            ConnectionManagementView()
+            NavigationView {
+                ConnectionManagementView()
+            }
+            .navigationBarHidden(true)
+            .navigationViewStyle(.stack)
         }
     }
 }
