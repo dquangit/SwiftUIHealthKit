@@ -10,15 +10,14 @@ import SwiftUI
 struct UserMedicalGeneralView: View {
     
     @Binding var name: String
-    @State var date: Date?
     @Binding var weight: Double?
-    @State var heartAttack: Bool?
-    @State var stroke: Bool?
-    @State var diabetes: Bool?
-    @State var mammaryGlandCancer: Bool?
-    @State var gender: Gender?
-    @State var weightUnit: WeightUnit?
-    @State var birthday: Date = Date()
+    @Binding var gender: Gender?
+    @Binding var birthday: Date?
+    @Binding var weightUnit: WeightUnit?
+    @Binding var heartAttack: Bool?
+    @Binding var stroke: Bool?
+    @Binding var diabetes: Bool?
+    @Binding var mammaryGlandCancer: Bool?
     
     private let genders = [
         RadioButtonItem(
@@ -48,7 +47,7 @@ struct UserMedicalGeneralView: View {
                 UnderlineTextFieldView(title: "name_required".localized, text: $name)
                 UnderlineDateFieldView(
                     title: "date_of_birth_required".localized,
-                    date: $date,
+                    date: $birthday,
                     rightText: "DD-MM-YYYY"
                 )
                 RadioButtonGroup(

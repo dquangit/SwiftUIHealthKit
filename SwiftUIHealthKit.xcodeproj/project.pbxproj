@@ -24,6 +24,11 @@
 		A7852C4C289BB234009A01B6 /* UserMedicalAdvancedlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7852C4B289BB234009A01B6 /* UserMedicalAdvancedlView.swift */; };
 		A7852C4E289BD135009A01B6 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7852C4D289BD135009A01B6 /* AvatarView.swift */; };
 		A78A25D3289BE9AE003510FD /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78A25D2289BE9AE003510FD /* CustomNavigationBar.swift */; };
+		A78A25D5289C292A003510FD /* Circumference.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78A25D4289C292A003510FD /* Circumference.swift */; };
+		A78A25D7289C2A30003510FD /* GeneralInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78A25D6289C2A30003510FD /* GeneralInfo.swift */; };
+		A78A25D9289C2B09003510FD /* Measurement.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78A25D8289C2B09003510FD /* Measurement.swift */; };
+		A78A25DB289C2B7E003510FD /* Diseases.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78A25DA289C2B7E003510FD /* Diseases.swift */; };
+		A78A25E7289C5AA1003510FD /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78A25E6289C5AA1003510FD /* View+Extension.swift */; };
 		A7F2EF902897D424009B051B /* ConnectionManagementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F2EF8F2897D424009B051B /* ConnectionManagementViewModel.swift */; };
 		A7F2EF922897D449009B051B /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F2EF912897D449009B051B /* ViewModel.swift */; };
 		A7F2EF942897D4B1009B051B /* UserMedicalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F2EF932897D4B1009B051B /* UserMedicalViewModel.swift */; };
@@ -79,6 +84,11 @@
 		A7852C4B289BB234009A01B6 /* UserMedicalAdvancedlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMedicalAdvancedlView.swift; sourceTree = "<group>"; };
 		A7852C4D289BD135009A01B6 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		A78A25D2289BE9AE003510FD /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
+		A78A25D4289C292A003510FD /* Circumference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Circumference.swift; sourceTree = "<group>"; };
+		A78A25D6289C2A30003510FD /* GeneralInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralInfo.swift; sourceTree = "<group>"; };
+		A78A25D8289C2B09003510FD /* Measurement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Measurement.swift; sourceTree = "<group>"; };
+		A78A25DA289C2B7E003510FD /* Diseases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diseases.swift; sourceTree = "<group>"; };
+		A78A25E6289C5AA1003510FD /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		A7F2EF8F2897D424009B051B /* ConnectionManagementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionManagementViewModel.swift; sourceTree = "<group>"; };
 		A7F2EF912897D449009B051B /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		A7F2EF932897D4B1009B051B /* UserMedicalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMedicalViewModel.swift; sourceTree = "<group>"; };
@@ -206,6 +216,10 @@
 			isa = PBXGroup;
 			children = (
 				A7F2EFB128984E25009B051B /* UserMedical.swift */,
+				A78A25D4289C292A003510FD /* Circumference.swift */,
+				A78A25D6289C2A30003510FD /* GeneralInfo.swift */,
+				A78A25D8289C2B09003510FD /* Measurement.swift */,
+				A78A25DA289C2B7E003510FD /* Diseases.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -244,21 +258,29 @@
 		A761078A289788DE0015ECC7 /* UserMedical */ = {
 			isa = PBXGroup;
 			children = (
-				A77EF20B289AAC9D00C8DFEF /* Views */,
+				A78A25DF289C4423003510FD /* Advanced */,
+				A78A25DE289C4419003510FD /* General */,
 				A761078B28978A2B0015ECC7 /* UserMedicalView.swift */,
 				A7F2EF932897D4B1009B051B /* UserMedicalViewModel.swift */,
 			);
 			path = UserMedical;
 			sourceTree = "<group>";
 		};
-		A77EF20B289AAC9D00C8DFEF /* Views */ = {
+		A78A25DE289C4419003510FD /* General */ = {
 			isa = PBXGroup;
 			children = (
-				A77EF20C289AACBB00C8DFEF /* UserMedicalGeneralView.swift */,
-				A7852C4B289BB234009A01B6 /* UserMedicalAdvancedlView.swift */,
 				A7852C4D289BD135009A01B6 /* AvatarView.swift */,
+				A77EF20C289AACBB00C8DFEF /* UserMedicalGeneralView.swift */,
 			);
-			path = Views;
+			path = General;
+			sourceTree = "<group>";
+		};
+		A78A25DF289C4423003510FD /* Advanced */ = {
+			isa = PBXGroup;
+			children = (
+				A7852C4B289BB234009A01B6 /* UserMedicalAdvancedlView.swift */,
+			);
+			path = Advanced;
 			sourceTree = "<group>";
 		};
 		A7F2EF992897F11C009B051B /* Views */ = {
@@ -285,6 +307,7 @@
 			children = (
 				A7F2EFA528980D15009B051B /* String+Extension.swift */,
 				A7F2EFAD289830F1009B051B /* Color+Extension.swift */,
+				A78A25E6289C5AA1003510FD /* View+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -428,12 +451,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A78A25DB289C2B7E003510FD /* Diseases.swift in Sources */,
 				A7F2EF9E2897F209009B051B /* ImageAssets.swift in Sources */,
+				A78A25D5289C292A003510FD /* Circumference.swift in Sources */,
 				A7F2EFAE289830F1009B051B /* Color+Extension.swift in Sources */,
 				A77E46CE289A2D84001C71AE /* UnderlineTextField.swift in Sources */,
 				A77EF215289B8F6D00C8DFEF /* WeightUnit.swift in Sources */,
 				A7F2EFB228984E25009B051B /* UserMedical.swift in Sources */,
+				A78A25D7289C2A30003510FD /* GeneralInfo.swift in Sources */,
 				A7F2EFA628980D15009B051B /* String+Extension.swift in Sources */,
+				A78A25D9289C2B09003510FD /* Measurement.swift in Sources */,
 				A7852C4C289BB234009A01B6 /* UserMedicalAdvancedlView.swift in Sources */,
 				A78A25D3289BE9AE003510FD /* CustomNavigationBar.swift in Sources */,
 				A77EF20D289AACBB00C8DFEF /* UserMedicalGeneralView.swift in Sources */,
@@ -441,6 +468,7 @@
 				A7F2EF942897D4B1009B051B /* UserMedicalViewModel.swift in Sources */,
 				A7F2EFA8289812CB009B051B /* AppColor.swift in Sources */,
 				A77EF20F289B4D0100C8DFEF /* RadioButtonGroup.swift in Sources */,
+				A78A25E7289C5AA1003510FD /* View+Extension.swift in Sources */,
 				A7F2EF982897EDBB009B051B /* CustomTabbarView.swift in Sources */,
 				A7F2EF902897D424009B051B /* ConnectionManagementViewModel.swift in Sources */,
 				A7F2EF9B2897F133009B051B /* ApplicationView.swift in Sources */,

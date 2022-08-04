@@ -63,7 +63,7 @@ struct ConnectionManagementView: View {
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
             NavigationLink(
                 destination: UserMedicalView(
-                    userMedical: viewModel.userMedical
+                    userMedical: viewModel.userMedical ?? UserMedical()
                 ),
                 isActive: $viewModel.gotoMedicalView
             ) {

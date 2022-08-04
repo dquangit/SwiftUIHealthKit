@@ -53,12 +53,10 @@ class AppleHealthService: HealthService {
             }
             return list.compactMap { $0 as? HKQuantitySample }
         }
-        
-        return self.userMedical(from: samples)
-            .copyWith(
-                dateOfBirth: dateOfBirth?.date,
-                gender: self.getGender(from: gender)
-            )
+        var userMedical = self.userMedical(from: samples)
+        userMedical.generalInfo.birthday = dateOfBirth?.date
+        userMedical.generalInfo.gender = self.getGender(from: gender)
+        return userMedical
     }
     
     private func granted() async throws -> Bool {
@@ -112,41 +110,38 @@ class AppleHealthService: HealthService {
     }
     
     private func userMedical(from hkQuantitySamples: [HKQuantitySample]) -> UserMedical {
-        var userMedical = UserMedical()
+        var userMedical = UserMedical(
+            generalInfo: GeneralInfo(),
+            circumference: Circumference(),
+            measurement: Measurement(),
+            diseases: Diseases()
+        )
         for sample in hkQuantitySamples {
             let quantity = sample.quantity
             switch HKQuantityTypeIdentifier(rawValue: sample.quantityType.identifier) {
             case .bodyMass:
-                userMedical = userMedical.copyWith(
-                    weight: quantity.doubleValue(
+                userMedical.generalInfo.weight = quantity
+                    .doubleValue(
                         for: .gramUnit(with: .kilo)
                     )
-                )
             case .height:
-                userMedical = userMedical.copyWith(
-                    height: quantity.doubleValue(
+                userMedical.measurement.height = quantity.doubleValue(
                         for: .meterUnit(with: .centi)
-                    )
                 )
             case .bloodGlucose:
-                userMedical = userMedical.copyWith(
-                    glucoseLevel: quantity.doubleValue(
-                        for: .moleUnit(
-                            with: .milli,
-                            molarMass: HKUnitMolarMassBloodGlucose
-                        ).unitDivided(by: .liter())
-                    )
+                userMedical.measurement.glucoseLevel = quantity.doubleValue(
+                    for: .moleUnit(
+                        with: .milli,
+                        molarMass: HKUnitMolarMassBloodGlucose
+                    ).unitDivided(by: .liter())
                 )
             case .heartRate:
-                userMedical = userMedical.copyWith(
-                    hearRate: Int(
-                        quantity.doubleValue(
-                            for: .count().unitDivided(
-                                by: .minute()
-                            )
-                        )
+                userMedical.measurement.heartRate = quantity.doubleValue(
+                    for: .count().unitDivided(
+                        by: .minute()
                     )
                 )
+                
             default:
                 break
             }

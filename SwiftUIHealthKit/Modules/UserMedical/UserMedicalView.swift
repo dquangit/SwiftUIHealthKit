@@ -8,18 +8,19 @@
 import SwiftUI
 
 struct UserMedicalView: View {
-    
-    let userMedical: UserMedical?
         
-    @State var index = 0
-    
-    @State var name: String = ""
-    @State var weight: Double?
+    @StateObject private var viewModel: UserMedicalViewModel
     
     private let tabbarItems = [
         TabbarItem(title: "general_info".localized),
         TabbarItem(title: "advanced_info".localized)
     ]
+    
+    init(userMedical: UserMedical) {
+        _viewModel = StateObject(
+            wrappedValue: UserMedicalViewModel(userMedical: userMedical)
+        )
+    }
     
     var body: some View {
         VStack(alignment: .center, spacing: 0) {
@@ -33,7 +34,7 @@ struct UserMedicalView: View {
                 .buttonStyle(.plain)
             }
             CustomTabbarView(
-                index: $index,
+                index: $viewModel.tabIndex,
                 tabbarItems: tabbarItems
             )
             .background(AppColor.dodgerBlue)
@@ -50,13 +51,34 @@ struct UserMedicalView: View {
                         )
                 )
                 .padding()
-            TabView(selection: $index) {
-                UserMedicalGeneralView(name: $name, weight: $weight).tag(0)
-                UserMedicalAdvancedlView().tag(1)
+            TabView(selection: $viewModel.tabIndex) {
+                UserMedicalGeneralView(
+                    name: $viewModel.name,
+                    weight: $viewModel.weight,
+                    gender: $viewModel.gender,
+                    birthday: $viewModel.birthday,
+                    weightUnit: $viewModel.weightUnit,
+                    heartAttack: $viewModel.heartAttack,
+                    stroke: $viewModel.stroke,
+                    diabetes: $viewModel.diabetes,
+                    mammaryGlandCancer: $viewModel.mammaryGlandCancer
+                )
+                .tag(0)
+                UserMedicalAdvancedlView(
+                    neck: $viewModel.neck,
+                    waist: $viewModel.waist,
+                    wrist: $viewModel.wrist,
+                    hip: $viewModel.hip,
+                    height: $viewModel.height,
+                    heartRate: $viewModel.heartRate,
+                    cholestrol: $viewModel.cholestrol,
+                    glucoseLevel: $viewModel.glucoseLevel
+                )
+                .tag(1)
             }
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
             Button("save_changes") {
-
+                viewModel.save()
             }
             .font(.system(size: 18).weight(.medium))
             .foregroundColor(.white)
@@ -67,7 +89,8 @@ struct UserMedicalView: View {
             .padding()
 
             Button {
-
+                hideKeyboard()
+                viewModel.clearAll()
             } label: {
                 Text("clear_all")
                     .font(.system(size: 18)
@@ -76,11 +99,5 @@ struct UserMedicalView: View {
                     .foregroundColor(AppColor.dodgerBlue)
             }
         }
-    }
-}
-
-struct UserMedicalView_Previews: PreviewProvider {
-    static var previews: some View {
-        UserMedicalView(userMedical: UserMedical())
     }
 }
